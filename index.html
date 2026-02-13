@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Shruti ❤️</title>
+
+<style>
+body{
+  margin:0;
+  font-family: Arial, sans-serif;
+  background:#7a1010;
+  background-image:url("https://www.transparenttextures.com/patterns/crumpled-paper.png");
+  color:white;
+  text-align:center;
+}
+
+/* page hidden by default */
+.page{
+  display:none;
+  height:100vh;
+  padding:25px;
+}
+
+/* only active page visible */
+.active{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+}
+
+/* teddy */
+.teddy{
+  font-size:90px;
+  margin:20px;
+  animation: float 2s infinite ease-in-out;
+}
+
+@keyframes float{
+  0%{transform:translateY(0)}
+  50%{transform:translateY(-10px)}
+  100%{transform:translateY(0)}
+}
+
+/* buttons */
+button{
+  padding:12px 28px;
+  margin:10px;
+  border:none;
+  border-radius:25px;
+  font-size:16px;
+  background:white;
+  color:black;
+  cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+<div class="page active">
+  <h1>I LOVE YOU SHRUTI ❤️<br>A small gift for you</h1>
+  <div class="teddy">🧸</div>
+  <button onclick="nextPage()">Start</button>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page">
+  <h2>Hey babe, I made a little surprise for you 😜</h2>
+  <div class="teddy">🧸</div>
+  <button onclick="nextPage()">Yes</button>
+</div>
+
+<!-- PAGE 3 -->
+<div class="page">
+  <h2>Are you ready for 7 days of love? 💕</h2>
+  <div class="teddy">🧸</div>
+  <button onclick="nextPage()">Ofccc ❤️</button>
+</div>
+
+<!-- PAGE 4 -->
+<div class="page">
+  <h2>Goooooodddd 😁</h2>
+  <div class="teddy">🧸</div>
+  <button onclick="nextPage()">Next</button>
+</div>
+
+<!-- PAGE 5 -->
+<div class="page">
+  <h2>🌹 HAPPY ROSE DAY 🌹<br>You make my life beautiful</h2>
+  <div class="teddy">🧸</div>
+  <button onclick="nextPage()">Next</button>
+</div>
+
+<!-- PAGE 6 -->
+<div class="page">
+  <h2>💌 Will you be mine forever?</h2>
+  <div class="teddy">🧸</div>
+  <button onclick="alert('Yayyyy ❤️ Love you Shruti')">YES ❤️</button>
+</div>
+
+
+<script>
+var pages = document.getElementsByClassName("page");
+var current = 0;
+
+function nextPage(){
+  pages[current].classList.remove("active");
+  current++;
+  if(current >= pages.length){
+    current = pages.length-1;
+  }
+  pages[current].classList.add("active");
+}
+</script>
+
+</body>
+</html>
